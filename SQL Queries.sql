@@ -23,3 +23,15 @@ FROM
   GROUP BY title
 ORDER BY
   sales DESC
+
+
+## Sales trend
+SELECT
+  FORMAT_DATE('%Y', release_date) AS `Year`,
+  SUM(total_sales) AS `Total Sales`
+FROM
+  `videogames-sales.Videos_Games_Sales.GamesSales_Table`
+GROUP BY
+  Year
+ORDER BY
+  Year DESC
