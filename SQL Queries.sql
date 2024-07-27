@@ -36,6 +36,7 @@ GROUP BY
 ORDER BY
   Year DESC
 
+  
 ## Find the percentage of each country on sales of the total.
   Needed to use CASE because some of the row have null values, waht caused zero/zero erro.
   SELECT
@@ -65,4 +66,15 @@ END
 FROM
   `videogames-sales.Videos_Games_Sales.GamesSales_Table`
 GROUP BY `Year`
-  
+
+
+
+  ## Consoles that sells more games
+SELECT
+console,
+SUM(total_sales) AS `Total Sales`,
+FROM
+  `videogames-sales.Videos_Games_Sales.GamesSales_Table`
+
+  GROUP BY console
+  ORDER BY `Total Sales` DESC
