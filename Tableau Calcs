@@ -1,0 +1,10 @@
+## Add a title of "Millions or Million" in the tooltip
+
+IF SUM([Total Sales]) <= 1 THEN 'Million'
+ELSE 'Millions'
+END
+
+
+## Non-Zero Sales Filter
+IF [Total Sales] = 0 THEN 0
+ELSE 1
