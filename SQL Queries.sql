@@ -1,5 +1,6 @@
 
 ##Checking for NULL values
+## I have found null values in some rows fos the total sales and other sales as well.
 SELECT
   #FORMAT_DATE('%Y', release_date) AS `Year`,
   COUNT(*),
